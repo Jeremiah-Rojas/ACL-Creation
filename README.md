@@ -2,7 +2,7 @@
 
 #Network Topology
 
-<img width="802" height="508" alt="image" src="https://github.com/user-attachments/assets/992a8943-ed2c-43a6-8b25-bd239cc37f06" />
+<img width="752" height="458" alt="image" src="https://github.com/user-attachments/assets/992a8943-ed2c-43a6-8b25-bd239cc37f06" />
 
 </br> The following lab shows how a python script can automate the creation of ACLs (Access Control Lists) which block traffic on a network; they prevent specific computers from communicating to any given system.
 
@@ -16,13 +16,13 @@
 ## Configurations
 
 The following configurations can be performed on the "/etc/network/interfaces" configuration file.
-<br>Management:<img width="1305" height="606" alt="image" src="https://github.com/user-attachments/assets/a5ba58e1-5bb6-4f4d-ac39-ffe5cd93bfa5" />
+<br>Management:<img width="1005" height="406" alt="image" src="https://github.com/user-attachments/assets/a5ba58e1-5bb6-4f4d-ac39-ffe5cd93bfa5" />
 
-<br>User 1:<img width="1303" height="607" alt="image" src="https://github.com/user-attachments/assets/c334bd2e-050d-4736-8460-df608b9cdef5" />
+<br>User 1:<img width="1005" height="406" alt="image" src="https://github.com/user-attachments/assets/c334bd2e-050d-4736-8460-df608b9cdef5" />
 
-<br>User 2:<img width="1303" height="604" alt="image" src="https://github.com/user-attachments/assets/36c604e7-4792-465d-ada8-01f1847037b6" />
+<br>User 2:<img width="1005" height="406" alt="image" src="https://github.com/user-attachments/assets/36c604e7-4792-465d-ada8-01f1847037b6" />
 
-<br>User 3:<img width="1300" height="612" alt="image" src="https://github.com/user-attachments/assets/6fe020f4-fa32-42dc-9fda-67c8d80751a9" />
+<br>User 3:<img width="1005" height="406" alt="image" src="https://github.com/user-attachments/assets/6fe020f4-fa32-42dc-9fda-67c8d80751a9" />
 
 The following configurations can either copied and pasted as a whole bewteen the break points or manually entered.
 </br>switch configurations:
