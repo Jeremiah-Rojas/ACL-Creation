@@ -24,7 +24,7 @@ The following configurations can be performed on the "/etc/network/interfaces" c
 
 <br>User 3:<img width="705" height="356" alt="image" src="https://github.com/user-attachments/assets/6fe020f4-fa32-42dc-9fda-67c8d80751a9" />
 
-The following configurations can either copied and pasted as a whole bewteen the break points or manually entered.
+The following configurations can either copied and pasted as a whole bewteen the break points or manually entered. These configurations create each of the VLANs for each user and give them names. Then the interfaces specified are given access to the each VLAN accordingly. Then lastly, the "g0/0" port is configured to be the trunk oprt which carries all traffic from different VLANS.
 </br>switch configurations:
 ```
 enable
