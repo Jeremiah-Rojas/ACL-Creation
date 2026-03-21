@@ -1,5 +1,19 @@
 # ACL-Creation
 
+#Network Topology
+
+<img width="882" height="578" alt="image" src="https://github.com/user-attachments/assets/992a8943-ed2c-43a6-8b25-bd239cc37f06" />
+
+</br> The following lab shows how a python script can automate the creation of ACLs (Access Control Lists) which block traffic on a network; they prevent specific computers from communicating to any given system.
+
+### Devices Used:
+- Cisco IOSv 15.7 router
+- Cisco IOSvL2 15.2.1 switch
+- GNS3 Software
+- Ubuntu Container (running on VMware machine)
+
+
+## Configurations
 
 ## Script in Action
 
