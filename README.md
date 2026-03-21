@@ -18,11 +18,11 @@
 The following configurations can be performed on the "/etc/network/interfaces" configuration file.
 <br>Management:<img width="1005" height="406" alt="image" src="https://github.com/user-attachments/assets/a5ba58e1-5bb6-4f4d-ac39-ffe5cd93bfa5" />
 
-<br>User 1:<img width="1005" height="406" alt="image" src="https://github.com/user-attachments/assets/c334bd2e-050d-4736-8460-df608b9cdef5" />
+<br>User 1:<img width="705" height="356" alt="image" src="https://github.com/user-attachments/assets/c334bd2e-050d-4736-8460-df608b9cdef5" />
 
-<br>User 2:<img width="1005" height="406" alt="image" src="https://github.com/user-attachments/assets/36c604e7-4792-465d-ada8-01f1847037b6" />
+<br>User 2:<img width="705" height="356" alt="image" src="https://github.com/user-attachments/assets/36c604e7-4792-465d-ada8-01f1847037b6" />
 
-<br>User 3:<img width="1005" height="406" alt="image" src="https://github.com/user-attachments/assets/6fe020f4-fa32-42dc-9fda-67c8d80751a9" />
+<br>User 3:<img width="705" height="356" alt="image" src="https://github.com/user-attachments/assets/6fe020f4-fa32-42dc-9fda-67c8d80751a9" />
 
 The following configurations can either copied and pasted as a whole bewteen the break points or manually entered.
 </br>switch configurations:
@@ -136,15 +136,15 @@ wr
 ## Script in Action
 
 Below is the script being run and me entering the specified values. Note that the interface the script asks for is actually a subinterface of the "physical" g0/0 port. This subinterface is necessary when routing between VLANs.
-<img width="1007" height="608" alt="image" src="https://github.com/user-attachments/assets/69b84ea3-bcaf-43b2-b784-ea5b0cfd5e20" />
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/69b84ea3-bcaf-43b2-b784-ea5b0cfd5e20" />
 
 </br>These are the configuration results on the router demonstrating that the ACLs have been implemented:
-<img width="1007" height="608" alt="image" src="https://github.com/user-attachments/assets/acefb565-c738-447a-af78-273bb1616d45" />
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/acefb565-c738-447a-af78-273bb1616d45" />
 
 </br>This is ping results of each machine showing that no traffic can travel from each user to any address on the 192.168.99.0 subnet. Note: Although ACLs are one-way, if you try ping from the Managment computer to any other user, the ping will work but you will not receive a reply back.
-User 1:<img width="1007" height="360" alt="image" src="https://github.com/user-attachments/assets/ea53ef2f-6c83-46c6-9f9b-8cb645bc914a" />
-</br>User 2:<img width="1007" height="341" alt="image" src="https://github.com/user-attachments/assets/7a5670ea-edaa-4932-b21d-7f0973931803" />
-</br>User 3:<img width="1007" height="340" alt="image" src="https://github.com/user-attachments/assets/643ef73e-0489-4129-ac54-e6ea0de81088" />
+User 1:<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/ea53ef2f-6c83-46c6-9f9b-8cb645bc914a" />
+</br>User 2:<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/7a5670ea-edaa-4932-b21d-7f0973931803" />
+</br>User 3:<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/643ef73e-0489-4129-ac54-e6ea0de81088" />
 
 
 ## Python Script
