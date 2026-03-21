@@ -24,9 +24,114 @@ The following configurations can be performed on the "/etc/network/interfaces" c
 
 <br>User 3:<img width="1300" height="612" alt="image" src="https://github.com/user-attachments/assets/6fe020f4-fa32-42dc-9fda-67c8d80751a9" />
 
+The following configurations can either copied and pasted as a whole bewteen the break points or manually entered.
+</br>switch configurations:
+```
+enable
+conf t
+host cisco-switch
+exit
+
+conf t
+
+vlan 2
+name VLAN-2
+exit
+
+vlan 3
+name VLAN-3
+exit
+
+vlan 4
+name VLAN-4
+exit
+
+vlan 99
+name MANAGEMENT
+exit
+
+interface g0/1
+switchport mode access
+switchport access vlan 2
+exit
+
+interface g0/2
+switchport mode access
+switchport access vlan 3
+exit
+
+interface g0/3
+switchport mode access
+switchport access vlan 4
+exit
+
+interface g3/3
+switchport mode access
+switchport access vlan 99
+end
+
+conf t
+int g0/0
+switchport trunk encapsulation dot1q
+switchport mode trunk
+end
+wr
+
+```
+<br>Router configurations:
+```
+conf t
+host cisco-router
+exit
+
+conf t
+
+interface g0/0
+ip address 192.168.0.1 255.255.255.0
+exit
+
+interface g0/0.2
+encapsulation dot1q 2
+ip address 192.168.2.1 255.255.255.0
+exit
+
+interface g0/0.3
+encapsulation dot1q 3
+ip address 192.168.3.1 255.255.255.0
+exit
+
+interface g0/0.4
+encapsulation dot1q 4
+ip address 192.168.4.1 255.255.255.0
+exit
+
+interface g0/0.99
+encapsulation dot1q 99
+ip address 192.168.99.1 255.255.255.0
+end
 
 
+conf t
+int g0/0
+no shut
+end
 
+conf t
+username msfadmin pass msfadmin
+username msfadmin priv 15
+
+line vty 0 4
+login local
+transport input all
+
+ip domain-name example.com
+crypto key generate rsa
+1024
+
+end
+wr
+
+```
 
 ## Script in Action
 
