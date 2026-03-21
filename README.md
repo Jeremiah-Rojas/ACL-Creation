@@ -78,6 +78,7 @@ end
 wr
 
 ```
+The router configurations below create subinterfaces for each VLAN which are necessary for inter-VLAN routing. And towards the bottom, the last few commands starting with "username msfadmin pass msfadmin" configures SSH and the username and password used to login.
 <br>Router configurations:
 ```
 conf t
