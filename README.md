@@ -2,7 +2,7 @@
 
 #Network Topology
 
-<img width="882" height="578" alt="image" src="https://github.com/user-attachments/assets/992a8943-ed2c-43a6-8b25-bd239cc37f06" />
+<img width="802" height="508" alt="image" src="https://github.com/user-attachments/assets/992a8943-ed2c-43a6-8b25-bd239cc37f06" />
 
 </br> The following lab shows how a python script can automate the creation of ACLs (Access Control Lists) which block traffic on a network; they prevent specific computers from communicating to any given system.
 
