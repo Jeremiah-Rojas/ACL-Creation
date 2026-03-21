@@ -147,4 +147,57 @@ User 1:<img width="1300" height="360" alt="image" src="https://github.com/user-a
 </br>User 3:<img width="1299" height="340" alt="image" src="https://github.com/user-attachments/assets/643ef73e-0489-4129-ac54-e6ea0de81088" />
 
 
+## Python Script
 
+It is recommended to ssh manually first; this clears out any options you have to agree to that would typically through an error to the python script.
+```
+# This Script automates the creation of ACLs on a router (the device that handles inter-VLAN routing)
+# Note: in your case, a different device may handle inter-VLAN router
+
+from netmiko import ConnectHandler
+# ------------------------------ DEVICE DEFINITIONS ------------------------------
+# Router Connection Info
+iosv = {
+    'device_type': 'cisco_ios',
+    'ip': '192.168.99.1',
+    'username': 'msfadmin',
+    'password': 'msfadmin'
+}
+
+# User inputs
+
+name = input("Enter the name of the ACL: ")
+ACL_name = name.replace(" ", "_")
+
+source_IP = input("From what IP address/range is the traffic coming from: ")
+dest_IP = input("From what IP address/range is the traffic going to?: ")
+
+while True:
+    ACL_action = input(f"For traffic going from {source_IP} to {dest_IP},\nshould this rule (deny/permit)?: ").lower()
+    if ACL_action in ("deny", "permit"):
+        break
+interface = input("Which interface should the ACL be applied to?: ")
+
+net_connect = ConnectHandler(**iosv)
+
+# Router commands pushed the network device
+
+router_commands = [
+    # Internet-facing interface
+    f"ip access-list extended {ACL_name}",
+    "no 1000",
+    f"{ACL_action} ip {source_IP} 0.0.0.255 {dest_IP} 0.0.0.255",
+    "1000 permit ip any any",
+    "exit",
+
+    f"interface {interface}",
+    f"ip access-group {ACL_name} in",
+    "end"]
+
+print("Applying router configuration...")
+net_connect.send_config_set(router_commands)
+net_connect.save_config()
+net_connect.disconnect()
+
+print("Configuration Complete!")
+```
